@@ -17,6 +17,27 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [],
+				"name": "TokenMarketPlace_EthTransferfailed",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "allowedTokens",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenToTransfer",
+						"type": "uint256"
+					}
+				],
+				"name": "TokenMarketPlace_InsufficientAllowance",
+				"type": "error"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -68,6 +89,33 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "expectedTokens",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "actualTokens",
+						"type": "uint256"
+					}
+				],
+				"name": "TokenMarketPlace_NotEnoughTokensInOrder",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "OrderId",
+						"type": "uint256"
+					}
+				],
+				"name": "TokenMarketPlace_OrderIsNotActive",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "numberOfTokens",
 						"type": "uint256"
 					}
@@ -97,6 +145,24 @@
 					}
 				],
 				"name": "buyTokensFromMarketPlace",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numberOfTokensToBuy",
+						"type": "uint256"
+					}
+				],
+				"name": "buyTokensFromSellOrderCreated",
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
@@ -172,19 +238,19 @@
 			]
 		},
 		"contracts/TokenMarketplace.sol": {
-			"keccak256": "0x5b96150ff91683a14fae9379f79d14d4c637ae222ee33141d2b2aa0ceb7e0f6f",
+			"keccak256": "0x888d1714f94e466cbc3407e8cc0edd745355c86302bd6dfbb654f03ad9c191f3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://920f3d316f52ef9a8e4d6970823cc84cbe84ac7312bd5327a81ec1cf72752427",
-				"dweb:/ipfs/QmUAEDDrtvumYhZkYUYi5oc4hJ1rK2FYdbAmzsmwhYCxN1"
+				"bzz-raw://1cba8c7e8acee4b5d3f1f9c3c49fcff65bc559bb8162abb8c5c39425beb992b9",
+				"dweb:/ipfs/QmdbUSUhm4PJxfDq7CFqiqFfd8WhBwzKHWp9JD3HxrMY9c"
 			]
 		},
 		"contracts/types/trade.sol": {
-			"keccak256": "0xa9cae56cdc262a02ec74e4a40e3852ed5aa7c5ff8910b975b53c67fd3cafd7ae",
+			"keccak256": "0x74c831358b37b3850db16c1b3c36ded294a2123d1fd532ce3b25c093f5cf608e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://08f03c2c13c082963206c58ac9ab72a269d95f6b984e2e3696295c3c55921cdc",
-				"dweb:/ipfs/QmcE6KgCJ7zrfftw6FQTo2CGrjbWtToG1J4aepL3Rq6dDz"
+				"bzz-raw://7ccf2ae9d5f2527ffe6e356ea68624550e228ce9441808c940d276e96cebea2c",
+				"dweb:/ipfs/QmV5tNTuCHNVhW3CDjgb4KeunAPSd1xobMmPKWGy9SNvHF"
 			]
 		}
 	},

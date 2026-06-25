@@ -1,5 +1,5 @@
 {
-	"id": "297060e6ef1a8ab299cb4c80b130bced",
+	"id": "f9effbce208dca4aa3e9ace177f71756",
 	"_format": "hh-sol-build-info-1",
 	"solcVersion": "0.8.34",
 	"solcLongVersion": "0.8.34+commit.80d5c536",
@@ -7,7 +7,7 @@
 		"language": "Solidity",
 		"sources": {
 			"contracts/types/trade.sol": {
-				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\nstruct Orderinfo{\r\n    uint256 orderId;\r\n    address seller;\r\n    uint256 numberOfTokensToSell;\r\n    bool isActive;\r\n}"
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\nstruct OrderInfo{\r\n    uint256 orderId;\r\n    address seller;\r\n    uint256 numberOfTokensToSell;\r\n    bool isActive;\r\n}"
 			}
 		},
 		"settings": {
@@ -44,7 +44,7 @@
 				"ast": {
 					"absolutePath": "contracts/types/trade.sol",
 					"exportedSymbols": {
-						"Orderinfo": [
+						"OrderInfo": [
 							10
 						]
 					},
@@ -64,7 +64,7 @@
 							"src": "33:23:0"
 						},
 						{
-							"canonicalName": "Orderinfo",
+							"canonicalName": "OrderInfo",
 							"id": 10,
 							"members": [
 								{
@@ -177,7 +177,7 @@
 									"visibility": "internal"
 								}
 							],
-							"name": "Orderinfo",
+							"name": "OrderInfo",
 							"nameLocation": "65:9:0",
 							"nodeType": "StructDefinition",
 							"scope": 11,
