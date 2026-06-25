@@ -8,17 +8,60 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "_slvToken",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
-						"name": "ExpectedPayment",
+						"name": "actualTokens",
 						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
-						"name": "ActualPayment",
+						"name": "expectedTokens",
+						"type": "uint256"
+					}
+				],
+				"name": "TokenMarketPlace_InsufficientBalance",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "expectedPayment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "actualPayment",
 						"type": "uint256"
 					}
 				],
 				"name": "TokenMarketPlace_InsufficientEthPayment",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "expectedToken",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "actualToken",
+						"type": "uint256"
+					}
+				],
+				"name": "TokenMarketPlace_InsufficientTokenBalance",
 				"type": "error"
 			},
 			{
@@ -57,6 +100,32 @@
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numberOfTokenToSell",
+						"type": "uint256"
+					}
+				],
+				"name": "createSellOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "slvToken",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -86,12 +155,36 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/TokenMarketplace.sol": {
-			"keccak256": "0xc702b1552928521dc81c5ffad5c9014d2c83494e5506f2f0ab078ab4fda2e8c9",
+		"@openzeppelin/contracts/interfaces/IERC20.sol": {
+			"keccak256": "0x1a6221315ce0307746c2c4827c125d821ee796c74a676787762f4778671d4f44",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://af0c1d08890c8bb5d0951803e46d237965918135bf4af3a6160eddb8dc565cec",
-				"dweb:/ipfs/QmPGtf3scFsqqmv1uNZTjMxTJH6tyMrZdepSwAcD3yiq2k"
+				"bzz-raw://1bb2332a7ee26dd0b0de9b7fe266749f54820c99ab6a3bcb6f7e6b751d47ee2d",
+				"dweb:/ipfs/QmcRWpaBeCYkhy68PR3B4AgD7asuQk7PwkWxrvJbZcikLF"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x74ed01eb66b923d0d0cfe3be84604ac04b76482a55f9dd655e1ef4d367f95bc2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5282825a626cfe924e504274b864a652b0023591fa66f06a067b25b51ba9b303",
+				"dweb:/ipfs/QmeCfPykghhMc81VJTrHTC7sF6CRvaA1FXVq2pJhwYp1dV"
+			]
+		},
+		"contracts/TokenMarketplace.sol": {
+			"keccak256": "0x5b96150ff91683a14fae9379f79d14d4c637ae222ee33141d2b2aa0ceb7e0f6f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://920f3d316f52ef9a8e4d6970823cc84cbe84ac7312bd5327a81ec1cf72752427",
+				"dweb:/ipfs/QmUAEDDrtvumYhZkYUYi5oc4hJ1rK2FYdbAmzsmwhYCxN1"
+			]
+		},
+		"contracts/types/trade.sol": {
+			"keccak256": "0xa9cae56cdc262a02ec74e4a40e3852ed5aa7c5ff8910b975b53c67fd3cafd7ae",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://08f03c2c13c082963206c58ac9ab72a269d95f6b984e2e3696295c3c55921cdc",
+				"dweb:/ipfs/QmcE6KgCJ7zrfftw6FQTo2CGrjbWtToG1J4aepL3Rq6dDz"
 			]
 		}
 	},
