@@ -1,0 +1,83 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numberOfTokens",
+						"type": "uint256"
+					}
+				],
+				"name": "TokenMarketPlace_ZeroNumberOfTokens",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "TOKEN_PRICE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numberOfTokens",
+						"type": "uint256"
+					}
+				],
+				"name": "buyTokensFromMarketPlace",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/TokenMarketplace.sol": "TokenMarketPlace"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/TokenMarketplace.sol": {
+			"keccak256": "0x673875d401ad9beed8113184b94858f0d94d1e68ff7e8c3ed32f1d587eb4b212",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3059e33146f037985fbdaa171ba2109b162859d1d0360c12289311ab8c29361b",
+				"dweb:/ipfs/QmQTkEamUWYV7LJ6YT3y6s9Mty4ASFkWcxnhDS8kgDpzLh"
+			]
+		}
+	},
+	"version": 1
+}
