@@ -2,7 +2,7 @@
   "contracts/TokenMarketplace.sol": {
     "__sources__": {
       "contracts/TokenMarketplace.sol": {
-        "content": "\r\n// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract TokenMarketPlace {\r\n    uint256 public constant TOKEN_PRICE = 1 ether;\r\n    uint256 private reseverdOrderedTokens;\r\n\r\n    error TokenMarketPlace_ZeroNumberOfTokens(uint256 numberOfTokens);\r\n\r\n       function buyTokensFromMarketPlace(uint256 numberOfTokens) external payable{\r\n         if(numberOfTokens==0){\r\n            revert TokenMarketPlace_ZeroNumberOfTokens(numberOfTokens);\r\n        \r\n        }\r\n    }\r\n}",
+        "content": "\r\n// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract TokenMarketPlace {\r\n    uint256 public constant TOKEN_PRICE = 1 ether;\r\n    uint256 private reseverdOrderedTokens;\r\n\r\n    error TokenMarketPlace_ZeroNumberOfTokens(uint256 numberOfTokens);\r\n    error TokenMarketPlace_InsufficientEthPayment(uint256 ExpectedPayment, uint256 ActualPayment);\r\n\r\n       function buyTokensFromMarketPlace(uint256 numberOfTokens) external payable{\r\n         if(numberOfTokens==0){\r\n            revert TokenMarketPlace_ZeroNumberOfTokens(numberOfTokens);\r\n        }\r\n         if(numberOfTokens*TOKEN_PRICE>msg.value) {\r\n            revert TokenMarketPlace_InsufficientEthPayment(numberOfTokens*TOKEN_PRICE, msg.value);\r\n\r\n         }\r\n\r\n    }\r\n}",
         "file": "contracts/TokenMarketplace.sol"
       }
     }
