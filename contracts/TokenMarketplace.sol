@@ -9,14 +9,18 @@ contract TokenMarketPlace {
     error TokenMarketPlace_ZeroNumberOfTokens(uint256 numberOfTokens);
     error TokenMarketPlace_InsufficientEthPayment(uint256 ExpectedPayment, uint256 ActualPayment);
 
-       function buyTokensFromMarketPlace(uint256 numberOfTokens) external payable{
-         if(numberOfTokens==0){
+       function _isZeroNumberOfToken(uint256 numberOfTokens) internal pure{
+           if(numberOfTokens==0){
             revert TokenMarketPlace_ZeroNumberOfTokens(numberOfTokens);
+           }
         }
-         if(numberOfTokens*TOKEN_PRICE>msg.value) {
+        function _CheckEthPayment(uint256 numberOfTokens) internal view {
+            if(numberOfTokens*TOKEN_PRICE>msg.value) {
             revert TokenMarketPlace_InsufficientEthPayment(numberOfTokens*TOKEN_PRICE, msg.value);
-
-         }
-
-    }
+            }
+        }
+       function buyTokensFromMarketPlace(uint256 numberOfTokens) external payable{
+                _isZeroNumberOfToken(numberOfTokens);
+                _CheckEthPayment(numberOfTokens);
+        }
 }

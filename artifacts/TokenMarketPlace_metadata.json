@@ -87,11 +87,11 @@
 	},
 	"sources": {
 		"contracts/TokenMarketplace.sol": {
-			"keccak256": "0xc3e6954a7909bb3d161c6fb59c41d80efa7a8e10bf5509e1b7d7020cd24ac6a1",
+			"keccak256": "0xc702b1552928521dc81c5ffad5c9014d2c83494e5506f2f0ab078ab4fda2e8c9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4e9811b34c7ec75b67a136ab17dd73453f02990bdb13584a2efc1519d4e0f093",
-				"dweb:/ipfs/QmfZdY7FKNykRwMfYMGML3iF5Th4zTyPvPq5KDivRaXpqr"
+				"bzz-raw://af0c1d08890c8bb5d0951803e46d237965918135bf4af3a6160eddb8dc565cec",
+				"dweb:/ipfs/QmPGtf3scFsqqmv1uNZTjMxTJH6tyMrZdepSwAcD3yiq2k"
 			]
 		}
 	},
